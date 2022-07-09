@@ -122,6 +122,10 @@ label:last-of-type{
 }
 .invalid > input{
     border: 2px solid hsl(0, 100%, 74%);
+    color: hsl(0, 100%, 74%);
+}
+.invalid > input::placeholder{
+    color: transparent;
 }
 .invalid img{
     display: initial;
