@@ -5,7 +5,10 @@ let check=false;
 
 inputs.forEach(input=>input.addEventListener("input",(evt)=>{
     if(check){
-        inputs.forEach(input=>input.parentElement.classList.remove("invalid"));
+        inputs.forEach(input=>{
+            input.parentElement.classList.remove("invalid");
+            input.value="";
+        });
         check=false;
     }
     const {name,value}=evt.target;
