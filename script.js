@@ -22,7 +22,7 @@ form.addEventListener("submit",function(evt){
     const data=Object.values(inputsData);
     for(let i=0;i<inputs.length;i++){
         data[i].trim()==""?inputs[i].parentElement.classList.add("invalid"):null;
-        if(i==2 && !data[i].match(regex)){
+        if(i==2 && !data[i].trim().match(regex)){
             inputs[i].parentElement.classList.add("invalid")
             inputs[i].value="email@example/com"
         }
